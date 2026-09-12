@@ -26,6 +26,9 @@ jobs:
 
       - name: list everything in the folder
         run: ls -a
+
+      - name: change directory to eshop_dbt
+        run: cd eshop_dbt; pwd;
         
       - name: Validate bundle
         run: databricks bundle validate -t prod
