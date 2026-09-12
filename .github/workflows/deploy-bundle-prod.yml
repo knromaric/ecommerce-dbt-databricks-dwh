@@ -21,11 +21,11 @@ jobs:
       - name: Set up Databricks CLI
         uses: databricks/setup-cli@main
 
-      - name: change directory to eshop_dbt
-        run: cd eshop_dbt
-
       - name: checking we are in the right folder
         run: pwd
+
+      - name: list everything in the folder
+        run: ls -a
         
       - name: Validate bundle
         run: databricks bundle validate -t prod
