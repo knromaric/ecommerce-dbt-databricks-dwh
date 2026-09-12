@@ -1,7 +1,7 @@
 resources:
   jobs:
     eShop_dbt_job:
-      name: eShop_dbt_job
+      name: eshop_dbt_job
       tasks:
         - task_key: run_dbt_tasks
           dbt_task:
