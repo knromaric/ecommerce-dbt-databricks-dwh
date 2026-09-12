@@ -16,7 +16,7 @@ variables:
     default: eshopdb
 
 include:
-  - resources/eshop_dbt_job.yml
+  - resources/eShop_dbt_job.yml
 
 
 targets:
