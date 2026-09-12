@@ -14,21 +14,16 @@ jobs:
       DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
       DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
 
+    defaults:
+      run:
+        working-directory: eshop_dbt
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up Databricks CLI
         uses: databricks/setup-cli@main
-
-      - name: checking we are in the right folder
-        run: pwd
-
-      - name: list everything in the folder
-        run: ls -a
-
-      - name: change directory to eshop_dbt
-        run: cd eshop_dbt; pwd;
         
       - name: Validate bundle
         run: databricks bundle validate -t prod
