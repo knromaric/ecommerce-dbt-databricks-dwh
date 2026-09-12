@@ -23,6 +23,9 @@ jobs:
 
       - name: change directory to eshop_dbt
         run: cd eshop_dbt
+
+      - name: checking we are in the right folder
+        run: pwd
         
       - name: Validate bundle
         run: databricks bundle validate -t prod
